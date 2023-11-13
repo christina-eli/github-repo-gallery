@@ -3,13 +3,14 @@ const overview = document.querySelector (".overview"); //profile info div
 const username = "christina-eli";
 
 //fetch API JSON Data
-const getUserInfo = async function () {
-    const userInfo = await fetch ('https://api.github.com/users/${username}');
+const gitUserInfo = async function () {
+    const userInfo = await fetch (`https://api.github.com/users/${username}`);
     const data = await userInfo.json();
     displayUserInfo(data);
 };
 
-//call function at the end
+//call function at the end//
+
 gitUserInfo();
 
 //Fetch & Display User Information
